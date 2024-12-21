@@ -1,0 +1,542 @@
+<http://www.opengis.net/def/rel/iana/1.0/service-doc>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "service-doc" ;
+        <http://purl.org/dc/terms/created>
+                "2020-06-10"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/valid> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                " Identifies service documentation for the context that is primarily intended for human consumption."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "service-doc"^^<https://www.iana.org/assignments/link-relations> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "service-doc"@en .
+
+<http://www.opengis.net/def/rel/iana/1.0/prev>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "prev" ;
+        <http://purl.org/dc/terms/created>
+                "2020-06-10"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/valid> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                " Indicates that the link’s context is a part of a series, and that the previous in the series is the link target. This relation is only used in examples."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "prev"^^<https://www.iana.org/assignments/link-relations> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "prev"@en .
+
+<http://www.opengis.net/def/rel/iana/1.0/self>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "self" ;
+        <http://purl.org/dc/terms/created>
+                "2020-06-10"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/valid> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                " Conveys an identifier for the link’s context."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "self"^^<https://www.iana.org/assignments/link-relations> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "self"@en .
+
+<http://www.opengis.net/def/register/>
+        <http://www.w3.org/2004/02/skos/core#member>
+                <http://www.opengis.net/def/rel/> .
+
+<http://www.opengis.net/def/rel/ogc/1.0/data>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Not yet registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "data" ;
+        <http://purl.org/dc/terms/created>
+                "2020-06-10"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/proposed> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                " Indicates that the link’s context is a distribution of a dataset that is an API and refers to the root resource of the dataset in the API."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "data" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "data"@en .
+
+<http://www.opengis.net/def/rel/iana/1.0/describedby>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "describedby" ;
+        <http://purl.org/dc/terms/created>
+                "2020-06-10"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/valid> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                " Refers to a resource providing information about the link’s context."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "describedby"^^<https://www.iana.org/assignments/link-relations> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "describedby"@en .
+
+<http://www.opengis.net/def/rel/iana/1.0/collection>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "collection" ;
+        <http://purl.org/dc/terms/created>
+                "2020-06-10"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/valid> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                " The target IRI points to a resource which represents the collection resource for the context IRI."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "collection"^^<https://www.iana.org/assignments/link-relations> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "collection"@en .
+
+<http://www.opengis.net/def/rel/iana/1.0/service-desc>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "service-desc" ;
+        <http://purl.org/dc/terms/created>
+                "2020-06-10"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/valid> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                " Identifies service description for the context that is primarily intended for consumption by machines. API definitions are considered service descriptions."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "service-desc"^^<https://www.iana.org/assignments/link-relations> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "service-desc"@en .
+
+<http://www.opengis.net/def/rel/>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Collection> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGC Link Relation Type Register" ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                "This is a register of link relation types used by OGC standards."@en ;
+        <http://www.w3.org/2004/02/skos/core#inScheme>
+                <http://www.opengis.net/def/rel> ;
+        <http://www.w3.org/2004/02/skos/core#member>
+                 <http://www.opengis.net/def/rel/ogc/1.0/exceptions> , <http://www.opengis.net/def/rel/ogc/1.0/execute> , <http://www.opengis.net/def/rel/ogc/1.0/job-list> , <http://www.opengis.net/def/rel/ogc/1.0/processes> , <http://www.opengis.net/def/rel/ogc/1.0/results> , <http://www.opengis.net/def/rel/ogc/1.0/conformance> , <http://www.opengis.net/def/rel/ogc/1.0/data> , <http://www.opengis.net/def/rel/ogc/1.0/items> , <http://www.opengis.net/def/rel/iana/1.0/service-doc> , <http://www.opengis.net/def/rel/iana/1.0/alternate> , <http://www.opengis.net/def/rel/iana/1.0/service-desc> , <http://www.opengis.net/def/rel/iana/1.0/self> , <http://www.opengis.net/def/rel/iana/1.0/collection> , <http://www.opengis.net/def/rel/iana/1.0/prev> , <http://www.opengis.net/def/rel/iana/1.0/next> , <http://www.opengis.net/def/rel/iana/1.0/describedby> , <http://www.opengis.net/def/rel/iana/1.0/license> , <http://www.opengis.net/def/rel/iana/1.0/item> , <http://www.opengis.net/def/rel/ogc/1.0/data-meta> , <http://www.opengis.net/def/rel/iana/1.0/status> , <http://www.opengis.net/def/rel/iana/1.0/up> , <http://www.opengis.net/def/rel/ogc/1.0/dataset> , <http://www.opengis.net/def/rel/ogc/1.0/geodata> , <http://www.opengis.net/def/rel/ogc/1.0/tiling-scheme>, <http://www.opengis.net/def/rel/ogc/1.0/tilesets-vector>, <http://www.opengis.net/def/rel/ogc/1.0/tilesets-coverage>, <http://www.opengis.net/def/rel/ogc/1.0/tilesets-map>, <https://www.opengis.net/def/rel/ogc/1.0/map>, <https://www.opengis.net/def/rel/ogc/1.0/legend>, <http://www.opengis.net/def/rel/ogc/1.0/tiling-schemes> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "OGC Link Relation Type Register"@en .
+
+<http://www.opengis.net/def/rel/ogc/1.0/conformance>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Not yet registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "conformance" ;
+        <http://purl.org/dc/terms/created>
+                "2020-06-10"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/proposed> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                " Refers to a resource that identifies the specifications that the link’s context conforms to."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "conformance" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "conformance"@en .
+
+<http://www.opengis.net/def/rel/iana/1.0/next>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "next" ;
+        <http://purl.org/dc/terms/created>
+                "2020-06-10"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/valid> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                " Indicates that the link’s context is a part of a series, and that the next in the series is the link target."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "next"^^<https://www.iana.org/assignments/link-relations> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "next"@en .
+
+<http://www.opengis.net/def/rel/ogc/1.0/items>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Not yet registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "items" ;
+        <http://purl.org/dc/terms/created>
+                "2020-06-10"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/proposed> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                " Refers to a resource that is comprised of members of the collection represented by the link’s context."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "items" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "items"@en .
+
+<http://www.opengis.net/def/rel/iana/1.0/license>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "license" ;
+        <http://purl.org/dc/terms/created>
+                "2020-06-10"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/valid> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                " Refers to a license associated with this context."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "license"^^<https://www.iana.org/assignments/link-relations> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "license"@en .
+
+<http://www.opengis.net/def/rel/iana/1.0/alternate>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "alternate" ;
+        <http://purl.org/dc/terms/created>
+                "2020-06-10"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/valid> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                " Refers to a substitute for this context."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "alternate"^^<https://www.iana.org/assignments/link-relations> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "alternate"@en .
+
+
+
+<http://www.opengis.net/def/rel/iana/1.0/item>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "item" ;
+        <http://purl.org/dc/terms/created>
+                "2020-06-10"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/valid> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                " The target IRI points to a resource that is a member of the collection represented by the context IRI."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "item"^^<https://www.iana.org/assignments/link-relations> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "item"@en .
+
+<http://www.opengis.net/def/rel>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "OGC Link Relation Type Register" ;
+        <http://www.opengis.net/def/metamodel/ogc-na/collectionView>
+                <http://www.opengis.net/def/rel/> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                "This is a register of link relation types used by OGC standards. "@en ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "OGC Link Relation Type Register"@en .
+
+<http://www.opengis.net/def/rel/ogc/1.0/data-meta>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Not yet registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "data-meta" ;
+        <http://purl.org/dc/terms/created>
+                "2021-04-28"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/proposed> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                "Identifies general metadata for the context (dataset or collection) that is primarily intended for consumption by machines."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "data-meta" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "data-meta"@en .
+
+<http://www.opengis.net/def/rel/ogc/1.0/exceptions>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Not yet registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "exceptions" ;
+        <http://purl.org/dc/terms/created>
+                "2020-06-10"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/proposed> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                "The target URI points to exceptions of a failed process."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "exceptions" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "exceptions"@en .
+
+<http://www.opengis.net/def/rel/ogc/1.0/execute>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Not yet registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "execute" ;
+        <http://purl.org/dc/terms/created>
+                "2020-06-10"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/proposed> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                "The target URI points to the execution endpoint of the server."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "execute" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "execute"@en .
+
+<http://www.opengis.net/def/rel/ogc/1.0/job-list>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Not yet registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "job-list" ;
+        <http://purl.org/dc/terms/created>
+                "2020-06-10"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/proposed> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                "The target URI points to the list of jobs."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "job-list" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "job-list"@en .
+
+<http://www.opengis.net/def/rel/ogc/1.0/processes>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Not yet registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "processes" ;
+        <http://purl.org/dc/terms/created>
+                "2020-06-10"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/proposed> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                "The target URI points to the list of processes the API offers."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "processes" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "processes"@en .
+
+<http://www.opengis.net/def/rel/ogc/1.0/results>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Not yet registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "results" ;
+        <http://purl.org/dc/terms/created>
+                "2020-06-10"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/proposed> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                "The target URI points to the results of a job."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "results" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "results"@en .
+
+<http://www.opengis.net/def/rel/iana/1.0/status>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "status" ;
+        <http://purl.org/dc/terms/created>
+                "2022-04-27"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/valid> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                "Identifies a resource that represents the status of the context."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "status"^^<https://www.iana.org/assignments/link-relations> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "status"@en .
+
+<http://www.opengis.net/def/rel/iana/1.0/up>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "up" ;
+        <http://purl.org/dc/terms/created>
+                "2022-04-27"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/valid> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                "Refers to a parent document in a hierarchy of documents."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "up"^^<https://www.iana.org/assignments/link-relations> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "up"@en .
+
+
+<http://www.opengis.net/def/rel/ogc/1.0/dataset>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Not yet registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "dataset" ;
+        <http://purl.org/dc/terms/created>
+                "2022-04-27"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/proposed> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                "The target IRI points to a resource representing the dataset (e.g. the root of an OGC Web API)."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "dataset" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "dataset"@en .
+
+<http://www.opengis.net/def/rel/ogc/1.0/geodata>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Not yet registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "geodata" ;
+        <http://purl.org/dc/terms/created>
+                "2022-04-27"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/proposed> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                "The target IRI points to a resource representing a collection of geospatial data."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "geodata" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "geodata"@en .
+
+
+<http://www.opengis.net/def/rel/ogc/1.0/tiling-scheme>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Not yet registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tiling-scheme" ;
+        <http://purl.org/dc/terms/created>
+                "2022-04-27"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/proposed> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                "The target IRI points to a resource that describes the TileMatrixSet according to the 2D-TMS standard."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "tiling-scheme" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "tiling-scheme"@en .
+
+<http://www.opengis.net/def/rel/ogc/1.0/tilesets-vector>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Not yet registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tilesets-vector" ;
+        <http://purl.org/dc/terms/created>
+                "2022-04-27"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/proposed> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                "The target IRI points to a resource that describes how to provide tile sets of the context resource in vector format."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "tilesets-vector" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "tilesets-vector"@en .
+
+<http://www.opengis.net/def/rel/ogc/1.0/tilesets-coverage>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Not yet registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tilesets-coverage" ;
+        <http://purl.org/dc/terms/created>
+                "2022-04-27"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/proposed> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                "The target IRI points to a resource that describes how to provide tile sets of the context resource in coverage format."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "tilesets-coverage" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "tilesets-coverage"@en .
+
+
+<http://www.opengis.net/def/rel/ogc/1.0/tilesets-map>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Not yet registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tilesets-map" ;
+        <http://purl.org/dc/terms/created>
+                "2022-04-27"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/proposed> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                "The target IRI points to a resource that describes how to provide tile sets of the context resource in map format."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "tilesets-map" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "tilesets-map"@en .
+
+<http://www.opengis.net/def/rel/ogc/1.0/tiling-schemes>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Not yet registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "tiling-schemes" ;
+        <http://purl.org/dc/terms/created>
+                "2022-04-27"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/proposed> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                "The target IRI points to a resource that lists one or more TileMatrixSets according to the 2D-TMS standard."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "tiling-schemes" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "tiling-schemes"@en .
+
+<https://www.opengis.net/def/rel/ogc/1.0/map>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Not yet registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "map" ;
+        <http://purl.org/dc/terms/created>
+                "2022-04-27"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/proposed> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                "Refers to a resource that is map representation of another geospatial resource (e.g. a collection)."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "map" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "map"@en .
+
+<https://www.opengis.net/def/rel/ogc/1.0/legend>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "Not yet registered with IANA" ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "legend" ;
+        <http://purl.org/dc/terms/created>
+                "2024-02-09"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.opengis.net/def/metamodel/ogc-na/status>
+                <http://www.opengis.net/def/status/proposed> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                "Refers to a legend for the map."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "legend" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "legend"@en .

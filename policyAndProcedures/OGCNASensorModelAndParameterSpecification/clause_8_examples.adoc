@@ -1,0 +1,38 @@
+== Examples
+
+http URI form:
+
+http://www.opengis.net/def/definition-type/Authority/0/code
+
+This policy has been designed to be able to support registration of models such as the: Community Sensor Model (CSM) cite:[GWG2017], Generic Point Cloud Model (GPM) cite:[GWG2015], Frame Sensor Model cite:[GWG2011], Pushbroom/Whiskbroom Sensor Model cite:[GWG2009], Light Detection and Ranging (LiDAR) Sensor Model cite:[GWG2011b], Spotlight Synthetic Aperture Radar (SAR) Sensor Model cite:[GWG2010] and others defined in ISO/TS 19130-2 cite:[ISO2014] and extensions of the National Imagery Transmission Format (NITF) standard cite:[NTB2000].
+
+The following examples use ISO 19130 cite:[ISO2010] and NITF sensor model parameters cite:[MILSTD2500C] to illustrate how to construct an http URI based on this OGC policy. The NITF examples are based on the SENSRB extension cite:[NTB2013]. The examples have been informed by lessons learnt from the OGC Testbed series cite:[Androsevic2013].
+
+Example 1, below, illustrates an http URI value for the ISO 19130 True Replacement Model:
+
+http://www.opengis.net/def/sensor-model/ISO/0/ISO-19130/SD_SensorModel/trueReplacementModel/SD_TrueReplacementModel
+
+Example 2, below, illustrates an http URI value for the NITF RPC00B model:
+
+http://www.opengis.net/def/sensor-model/NTB/2.1/NITF/RPC00B
+
+Example 3, below, illustrates the http URI value for the 'region of validity' parameter of the ISO 19130 True Replacement Model:
+
+http://www.opengis.net/def/sensor-model-param/ISO/0/ISO-19130/SD_TrueReplacementModel/regionOfValidity
+
+Example 4, below, illustrates the http URI value for the LAT_OFF parameter of the NITF RPC00B model cite:[NTB2000].
+
+http://www.opengis.net/def/sensor-model-param/NTB/2.1/NITF/RPC00B/LAT_OFF
+
+[NOTE]
+====
+SENSRB is a NITF tagged record extension for imaging electro-optical sensors [STDI-0002 App Z]. It was developed to enable the storage and use of geometric parameters from electro-optical sensor systems. It provides an encoding scheme to support implementation of the Community Sensor Model (CSM) Working Group’s guidance on geopositioning from frame, pushbroom, and whiskbroom sensors.
+====
+
+Example 5, below, illustrates the http URI value for the REFERENCE_ROW field of the NITF SENSRB extension:
+
+http://www.opengis.net/def/sensor-model-param/NTB/2.1/NITF/SENSRB/REFERENCE_ROW
+
+Example 6, below, illustrates where the field is nested inside other objects and the hierarchy of nesting objects is identified as separate sections of the URI. The http URI value for the PLATFORM_HEADING field, contained inside a ATTITUDE_EULER_ANGLES object of the NITF SENSRB extension is:
+
+http://www.opengis.net/def/sensor-model-param/NTB/2.1/NITF/SENSRB/ATTITUDE_EULER_ANGLES/PLATFORM_HEADING

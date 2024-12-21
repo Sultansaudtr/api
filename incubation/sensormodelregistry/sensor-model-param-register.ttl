@@ -1,0 +1,35 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix api:   <http://purl.org/linked-data/api/vocab#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+@prefix status: <http://www.opengis.net/def/status/> .
+@prefix policy: <http://www.opengis.net/def/metamodel/ogc-na/> .
+
+<http://www.opengis.net/def/register/> <http://www.w3.org/2004/02/skos/core#member> <http://www.opengis.net/def/sensor-model-param/>.
+
+<http://www.opengis.net/def/sensor-model-param>
+        a                      skos:ConceptScheme ;
+        skos:prefLabel         "OGC Sensor Model Parameter Register" ;
+        rdfs:label             "OGC Sensor Model Parameter Register" ;
+        policy:collectionView  <http://www.opengis.net/def/sensor-model-param/> .
+
+
+<http://www.opengis.net/def/sensor-model-param/>
+        a                      skos:Collection ;
+        rdfs:seeAlso           <http://tools.ietf.org/html/rfc5165> , <http://www.opengis.net/doc/ogc-na-policies> ;
+        dc:creator             "OGC Naming Authority" ;
+        dc:source              "OGC Naming Authority Procedures" , "IETF RFC 5165" ;
+        dcterms:created        "2019-01-26"^^xsd:date ;
+        skos:prefLabel         "OGC Sensor Model Parameter Register" ;
+        skos:inScheme         <http://www.opengis.net/def/sensor-model-param>;         
+        rdfs:label             "OGC Sensor Model Parameter Register" ;
+        
+        skos:member <http://www.opengis.net/def/sensor-model-param/xdomes/>, <http://www.opengis.net/def/sensor-model-param/csmwg/>, <http://www.opengis.net/def/sensor-model-param/BODC/>.
+
+

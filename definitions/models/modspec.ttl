@@ -1,0 +1,352 @@
+# baseURI: http://www.opengis.net/def/ont/modspec
+# imports: http://purl.org/dc/elements/1.1/
+# imports: http://www.w3.org/2002/07/owl#
+
+@prefix adms:	<http://www.w3.org/ns/adms#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix policy: <http://www.opengis.net/def/metamodel/ogc-na/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spec: <http://www.opengis.net/def/ont/modspec/> .
+@prefix ogc-ms: <http://www.opengis.net/def/ont/modspec/> . 
+@prefix : <http://www.opengis.net/def/ont/modspec/> . 
+@prefix status: <http://www.opengis.net/def/status/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dct:hasPart
+  a owl:ObjectProperty ;
+  rdfs:label "Has Part" ;
+.
+<http://purl.org/linked-data/registry#Register>
+  a owl:Class ;
+  rdfs:label "Governed Artefact" ;
+.
+<http://www.opengis.net/def/ont/modspec>
+  a owl:Ontology ;
+  dc:creator "Simon J D Cox" ;
+  dc:description "This standard specifies some desirable characteristics of a standards specification that will encourage implementations by minimizing difficulty determining requirements, mimicking implementation structure and maximizing usability and interoperability. Clause 6.1 contains the UML model of a specification upon which this standard is described. Annex C contains informal and non-normative definitions ordered for ease of understanding. These two sections can be read first to aid in the understanding of the rest of the document." ;
+  dc:rights "Copyright © 2011 Open Geospatial Consortium. To obtain additional rights of use, visit http://www.opengeospatial.org/legal/" ;
+  dc:source "The Specification Model - A Standard for Modular specifications. OGC document 08-131r3 https://portal.opengeospatial.org/files/34762" ;
+  dc:title "The Specification Model - A Standard for Modular specifications" ;
+  dct:modified "2015-06-10" ;
+  rdfs:comment "This is an RDF/OWL Ontology for the OGC Modular Specifications model for technical/engineering specifications. " ;
+  rdfs:isDefinedBy <http://www.opengis.net/doc/modular-spec> ;
+  :implements <http://www.opengis.net/def/docs/08-131r3> ;
+  rdfs:label "An RDF/OWL ontology for modular specifications" ;
+  owl:imports dc: ;
+  owl:imports owl: ;
+.
+
+:Register
+    a owl:Class ;
+    rdfs:label "Register" ;
+    skos:definition "A Governed Artefact that defines a set of identifiable elements." ;
+ . 
+ 
+:Standard
+  rdfs:label "Long term family/group of specifications " ;
+  rdfs:subClassOf adms:AssetRepository ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :date ;
+    ] ;
+.
+
+:specification
+  a owl:ObjectProperty ;
+  rdfs:label "specialisation of dcat:dataset relationship limiting domain and range to standard-specification relationship" ;
+  rdfs:subProperty dcat:dataset ;
+  rdfs:range :Specification ;
+  rdfs:domain :Standard ;
+.
+
+
+:Basic
+  a :TestType ;
+  rdfs:label "Basic" ;
+.
+:CM
+  a :StandardizationTargetType ;
+  rdfs:label "Conceptual Model" ;
+.
+:Capabilities
+  a :TestType ;
+  rdfs:label "Capabilities" ;
+.
+:ConformanceClass
+  a owl:Class ;
+  dc:description "A class of conformance tests. A conformant implementation must pass all the tests in the class. " ;
+  dc:source "OGC-NA Specification Elements NTS 2.0" ;
+  policy:status status:valid ;
+  rdfs:label "Conformance Class" ;
+  rdfs:seeAlso <http://www.opengis.net/doc/POL-NTS/SPEC/2.0> ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dct:hasPart ;
+    ] ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:allValuesFrom :ConformanceClass ;
+      owl:onProperty :dependency ;
+    ] ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:allValuesFrom :ConformanceTest ;
+      owl:onProperty :conformanceTest ;
+    ] ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :requirementsTested ;
+    ] ;
+  skos:notation "conf"^^policy:lcname ;
+  skos:prefLabel "conformance test or class" ;
+.
+:ConformanceTest
+  a owl:Class ;
+  dc:description "A test to verify that a conformant implementation satisfies one or more requirements. " ;
+  rdfs:label "Conformance test" ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :method ;
+    ] ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :purpose ;
+    ] ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :testType ;
+    ] ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :requirement ;
+    ] ;
+.
+:ImpSpec
+  a :StandardizationTargetType ;
+  rdfs:label "Implementation Specification" ;
+.
+:NormativeStatement
+  a owl:Class ;
+  dc:description "A normative statement in a technical specification or standard. Usually indicated by the use of normative language including the words SHALL, SHOULD, MAY. " ;
+  rdfs:label "Normative statement" ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dct:description ;
+    ] ;
+.
+:Recommendation
+  a owl:Class ;
+  dc:description "A normative statement using the word SHOULD. " ;
+  rdfs:label "Recommendation" ;
+  rdfs:subClassOf :NormativeStatement ;
+.
+:Requirement
+  a owl:Class ;
+  dc:description "A normative statement in the form of an imperative using the word SHALL or providing permission using the word MAY. " ;
+  rdfs:label "Requirement" ;
+  rdfs:subClassOf :NormativeStatement ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :test ;
+    ] ;
+  skos:notation "req"^^policy:lcname ;
+.
+:RequirementsClass
+  a owl:Class ;
+  dc:description "A class of requirements, comprising a logical grouping of normative statements that shall be satisfied as a group in conformant implementations. May have dependencies on other requirements classes, but there should be no circular dependencies else the classes must always be satisfied together so are functionally one class. " ;
+  rdfs:label "Requirements class" ;
+  rdfs:subClassOf :Register ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :normativeStatement ;
+    ] ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:allValuesFrom :RequirementsClass ;
+      owl:onProperty :dependency ;
+    ] ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :targetType ;
+    ] ;
+.
+:Specification
+  a owl:Class ;
+  dc:description "The base class for a specification or standard. This serves as the container for conformance classes. " ;
+  rdfs:label "Technical specification" ;
+  rdfs:subClassOf policy:Document ;
+  rdfs:subClassOf adms:Asset ;
+  rdfs:subClassOf dct:Standard ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :date ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :status ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :authority ;
+    ] ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:onClass :ConformanceClass ;
+      owl:onProperty :class ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  skos:changeNote "2021-06-01 - Specification as the Conformance Classes collection. Conformance Suite removed as it is usually not a named item nor there is naming convention for such. Requirement Classes relationship removed as redundant with Specification -> Conformance Class -> Conformance Test -> Requirement" ;
+.
+
+:StandardizationTargetType
+  a owl:Class ;
+  rdfs:label "Standardization target type" ;
+.
+:Status
+  a rdfs:Datatype ;
+  rdfs:subClassOf skos:Concept ;
+.
+:TestType
+  a owl:Class ;
+  rdfs:label "Conformance test type" ;
+  rdfs:subClassOf skos:Concept ;
+.
+:authority
+  a owl:ObjectProperty ;
+  rdfs:domain :Specification ;
+  rdfs:label "authority for specification" ;
+.
+:class
+  a owl:ObjectProperty ;
+  rdfs:label "Conformance Class" ;
+    skos:prefLabel "Conformance Class" ;
+  rdfs:subPropertyOf dct:hasPart ;
+.
+:conformanceTest
+  a owl:ObjectProperty ;
+  rdfs:label "Has Conformance Test" ;
+
+  rdfs:subPropertyOf dct:hasPart ;
+.
+:date
+  a owl:DatatypeProperty ;
+  rdfs:domain :Specification ;
+  rdfs:label "Specification date" ;
+  rdfs:range xsd:date ;
+.
+:dependency
+  a owl:ObjectProperty ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          :RequirementsClass
+          :ConformanceClass
+        ) ;
+    ] ;
+  rdfs:label "RequirementsClass  or ConformanceClass dependency" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          :RequirementsClass
+          :ConformanceClass
+        ) ;
+    ] ;
+.
+:method
+  a owl:DatatypeProperty ;
+  a owl:FunctionalProperty ;
+  rdfs:domain :ConformanceTest ;
+  rdfs:label "Test method" ;
+.
+:normativeStatement
+  a owl:ObjectProperty ;
+  rdfs:label "has Normative Statement" ;
+  rdfs:range :NormativeStatement ;
+  rdfs:subPropertyOf dct:hasPart ;
+.
+:purpose
+  a owl:DatatypeProperty ;
+  a owl:FunctionalProperty ;
+  rdfs:domain :ConformanceTest ;
+  rdfs:label "Test purpose" ;
+  rdfs:subPropertyOf dct:description ;
+.
+:reference
+  a owl:ObjectProperty ;
+  rdfs:domain :Specification ;
+  rdfs:label "Specification reference" ;
+  rdfs:range :Specification ;
+.
+:requirement
+  a owl:ObjectProperty ;
+  rdfs:domain :ConformanceTest ;
+  rdfs:label "Requirement tested" ;
+  rdfs:range :Requirement ;
+  owl:inverseOf :test ;
+.
+:requirementsClass
+  a owl:ObjectProperty ;
+  rdfs:range :RequirementsClass ;
+.
+:requirementsTested
+  a owl:ObjectProperty ;
+  rdfs:domain :ConformanceClass ;
+  rdfs:label "Requirements tested" ;
+  rdfs:range :RequirementsClass ;
+  rdfs:subPropertyOf :requirementsClass ;
+.
+:status
+  a owl:DatatypeProperty ;
+  rdfs:label "Specification status" ;
+  rdfs:range :Status ;
+.
+:targetType
+  a owl:ObjectProperty ;
+  rdfs:domain :RequirementsClass ;
+  rdfs:label "Standardization target type" ;
+  rdfs:range :StandardizationTargetType ;
+.
+:test
+  a owl:ObjectProperty ;
+  rdfs:domain :Requirement ;
+  rdfs:label "Test for this requirement" ;
+  rdfs:range :ConformanceTest ;
+  owl:inverseOf :requirement ;
+.
+
+:testType
+  a owl:FunctionalProperty ;
+  a owl:ObjectProperty ;
+  rdfs:domain :ConformanceTest ;
+  rdfs:label "test type" ;
+  rdfs:range :TestType ;
+.
+
+:implements
+  a owl:ObjectProperty ;
+  rdfs:domain :Specification ;
+  rdfs:label "implementation of a more abstract specification" ;
+
+  rdfs:inverseOf :conformanceTarget
+  rdfs:range :TestType ;
+.
+

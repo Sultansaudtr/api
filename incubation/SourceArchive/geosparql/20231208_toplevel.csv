@@ -1,0 +1,8 @@
+code,url,action
+500,http://www.opengis.net/def/geosparql/servicedescription,inScheme
+400,http://www.opengis.net/def/geosparql/safuncs,concept label and inScheme
+400,http://www.opengis.net/def/geosparql/geo-jsonldcontext,concept label and inScheme
+400,http://www.opengis.net/def/geosparql/sf-jsonldcontext,concept label and inScheme
+400,http://www.opengis.net/def/geosparql/extended-examples,concept label and inScheme
+400,http://www.opengis.net/def/geosparql/validator,concept label and inScheme
+400,http://www.opengis.net/def/geosparql/repository,concept label and inScheme

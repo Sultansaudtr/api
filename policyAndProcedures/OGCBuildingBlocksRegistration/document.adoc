@@ -1,0 +1,61 @@
+= OGC Policy on Registration of Standards Building Blocks
+:comment: ### Document type; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
+:doctype: policy
+:comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
+:status: draft
+:comment: ### Relevant committee; mandatory. The permitted types are: technical, planning, and strategic-member-advisory
+:committee: technical
+:comment: ### Internal reference number; mandatory
+:docnumber: 24-005
+:comment: ### Date on which the standard was updated; mandatory
+:received-date: 2024-10-30
+:comment: ### Date on which the standard was approved by the issuing authority; mandatory
+:issued-date: 2999-05-29
+:comment: ### Date on which the standard was published; mandatory
+:published-date: 2999-06-03
+:copyright-year: 2024
+:comment: ### Version number; optional. Dot-delimited, preferably with this structure <version number>.<minor version number>
+:edition: 27.0
+:comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"
+:external-id: http://www.opengis.net/doc/pol/tcpnp/27.0
+:comment: ### Author one
+:fullname: TBA TBA
+:comment: ### Author two
+:fullname_2: TBA TBA
+:comment: ### Role of the authors; optional. Supply only if corresponding author is an editor
+:role_2: editor
+:comment: ### Comma delimited keywords; mandatory
+:keywords: ogcdoc, OGC document, policy, naming authority, building blocks
+:comment: ### Metanorma flavor; mandatory
+:mn-document-class: ogc
+:comment: ### Directory name used as prefix for the location of image files; optional
+:imagesdir: images
+:comment: ### Desired output formats; mandatory
+:mn-output-extensions: xml,html,doc,pdf,rxl
+:comment: ### Enable local relaton cache for quick inclusion of prefetched references; optional. For further information, visit: https://www.metanorma.org/author/ref/document-attributes/#caches, https://www.metanorma.org/author/topics/building/reference-lookup/#lookup-result-caching
+:local-cache-only:
+
+
+// Clauses
+include::sections/00-preface.adoc[]
+
+include::sections/01-scope.adoc[]
+
+include::sections/02-terms-and-definitions.adoc[]
+
+include::sections/03-references.adoc[]
+
+// Add clause files as needed
+include::sections/04-roles.adoc[]
+
+include::sections/05-considerations.adoc[]
+
+include::sections/06-processes.adoc[]
+
+
+////
+Annexes
+Add annex files as needed
+////
+
+include::sections/annex-history.adoc[]

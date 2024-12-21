@@ -1,0 +1,97 @@
+[[processes]]
+== Processes
+
+=== Review by the Architecture Domain Working Group
+
+The Architecture Domain Working Group (DWG) considers overarching architectural issues that are germane to multiple OGC standards, including mechanisms for describing and invoking services in a heterogeneous distributed network.
+
+During the Architecture DWG's review of a Standard, it is the responsibility of the SWG to seek approval from the DWG on the granularity, reusability, and interfacing of the building block.
+
+Scope: The decision of the Architecture Domain Working Group with regard to building block registration is limited to:
+
+* approval or rejection of the proposed level of granularity of building block
+* approval or rejection of the reusability of a building block
+* approval or rejection of the proposed interfacing of a building block with others
+
+Trigger: 
+
+* SWG submits a candiate Standard or a previously approved Standard for review by the Architecture DWG.
+
+Inputs: 
+
+* Candidate Standard or a previously approved Standard
+* A completed form describing the level of granularity, reusability, and interfacing of the building block
+
+Process:
+
+. Architecture DWG Chair begins a period of review by the Architecture DWG
+. Architecture DWG evaluates the structure of the proposed building block(s)
+. Architecture DWG Chair conducts a vote on the approval of the proposed level of granularity, reusability, and interfacing of the building block(s)
+. Architecture DWG Chair creates a ticket, on the OGC-NA Git repository, with the result of the Architecture DWG vote
+
+Outputs:
+
+* Architecture DWG approval or rejection of the proposal from the SWG
+* Alternatively, the Architecture DWG may direct that a building block not be registered
+
+NOTE: Architecture DWG approval may be unconditional or conditional upon changes being made to the proposed building block.
+
+=== Review by the OGC Naming Authority SubCommittee
+
+The mission of the OGC Naming Authority (OGC-NA) is to provide the means through which OGC resources such as OGC documents, namespaces and ontologies can be controlled and managed such that they can provide clear and well-defined names and definitions (OGC 09-046r6).
+
+Scope: The decision of the OGC-NA with regard to building block registration is limited to:
+
+* the description of a building block
+* the identification of a building block
+
+Trigger: 
+
+* Architecture DWG Chair creates a ticket, on the OGC-NA Git repository, with the result of the Architecture DWG vote
+
+Inputs: 
+
+* Approval by the Architecture DWG of the granularity, reusability and interfacing of the building block
+
+Process:
+
+. OGC-NA Chair begins a period of review by the OGC-NA
+. OGC-NA Chair conducts a vote on registration of the building block or as a group of building blocks
+. If the vote passes, OGC Staff register the building block or group of building blocks in the register.
+. If the vote fails to pass, then OGC-NA Chair asks the SWG to revise the proposal before resubmission.
+
+Outputs:
+
+* Registered Building Block displayed on the registry
+
+
+=== Appeals
+
+A SWG may appeal to the TC Chair if it disagrees with the decisions of the Architecture DWG or OGC-NA regarding building block registration. 
+
+Trigger: 
+
+* A SWG disagrees with a decision of the Architecture DWG or OGC-NA.
+
+Inputs:
+
+* An Appeal Request Form
+
+Process:
+
+. SWG submits appeal form to the TC Chair
+. TC Chair convenes an Appeals Panel consisting of members of the OGC Architecture Board (OAB) and invites the SWG
+. TC Chair invites the chairs of the Architecture DWG and OGC-NA
+. The Appeals Panel votes on whether to uphold the decisions of the Architecture DWG and OGC-NA
+
+Outputs:
+
+* Final decision of the OAB
+
+The Appeal Request Form shall contain at a minimum:
+
+* identification of the source of the appeal (i.e. the SWG and the point of contact),
+* a detailed and specific description of the situation, 
+* a justification for the appeal, and
+* a statement of the impact if the appeal is not successful
+

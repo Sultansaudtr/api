@@ -1,0 +1,97 @@
+# baseURI: http://www.opengis.net/def/ont/specrel
+
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spec: <http://www.opengis.net/def/ont/modspec/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix specrel: <http://www.opengis.net/def/ont/specrel/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix adms:	<http://www.w3.org/ns/adms#> .
+
+<http://www.opengis.net/def/ont/specrel> a owl:Ontology;
+ rdfs:comment "Model of relationships between OGC specifications and related documents and artefacts" ;
+  dc:creator "Rob Atkinson" .
+
+specrel:modspec a owl:ObjectProperty ;
+rdfs:label "As ModSpec" ;
+rdfs:comment "References a model of the document contents modelled using the OGC Modular Specification, where application using the baseURI defined for specification elements in the document."@en;
+rdfs:range spec:Specification ;
+.
+
+
+specrel:normativeRef a owl:ObjectProperty ;
+rdfs:label "Normatively References" ;
+rdfs:comment "Superset of different types of relations that are included in Normative Reference sections"@en ;
+rdfs:subPropertyOf specrel:relatesTo ;
+.
+
+specrel:implementation a owl:ObjectProperty ;
+rdfs:label "Implementation" ;
+rdfs:comment "Specification referenced is an implementation of a conceptual model defined in the subject. Note that this may be a self-reference for older specifications before the practice was to separate conceptual models and implementations."@en;
+owl:inverseProperty specrel:implements ;
+rdfs:subPropertyOf specrel:relatesTo ;
+.
+
+specrel:implements a owl:ObjectProperty ;
+rdfs:label "Implements" ;
+rdfs:comment "This specification implements the referenced conceptual model defined in the subject. Note that this may be a self-reference for older specifications before the practice was to separate conceptual models and implementations."@en;
+rdfs:subPropertyOf specrel:normativeRef ;
+owl:inverseProperty specrel:conceptualModelOf ;
+.
+
+prof:isProfileOf rdfs:subPropertyOf specrel:normativeRef .
+
+specrel:uses a owl:ObjectProperty ;
+rdfs:label "Uses" ;
+rdfs:comment "The subject specification uses the referenced specification as a normative component"@en;
+rdfs:subPropertyOf specrel:normativeRef ;
+.
+
+specrel:relatesTo a owl:ObjectProperty ;
+rdfs:label "Unspecified relation" ;
+rdfs:comment "This specification has some unspecified relation to the referenced document."@en;
+rdfs:domain spec:Specification;
+rdfs:range spec:Specification;
+.
+
+
+spec:Specification   a sh:NodeShape ;
+rdfs:comment "SHACL NodeShape model uses to reference properties from other namespaces that may be used for relations";
+sh:property specrel:wasInfluencedBy, specrel:next, specrel:last ;
+.
+
+specrel:wasInfluencedBy a sh:PropertyShape ;
+  sh:description "Used to relate a specification to documents relating to activities such as Testbeds" ;
+  sh:path prov:wasInfluencedBy ;
+  sh:class skos:Concept ;
+  .
+
+specrel:next a sh:PropertyShape ;
+  sh:description "Next version" ;
+  sh:path adms:next ;
+  sh:class skos:Concept ;
+  .
+
+specrel:last a sh:PropertyShape ;
+  sh:description "Last version (most recent)" ;
+  sh:path adms:last ;
+  sh:class skos:Concept ;
+  .
+  
+
+specrel:prev a sh:PropertyShape ;
+  sh:description "Previous version" ;
+  sh:path adms:prev ;
+  sh:class skos:Concept ;
+  .
+  
+specrel:guidance a owl:ObjectProperty ;
+rdfs:label "Guidance" ;
+rdfs:comment "The referenced document provides guidance for this specification."@en;
+.

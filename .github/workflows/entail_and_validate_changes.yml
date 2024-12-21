@@ -1,0 +1,73 @@
+name: Entail, validate changes, update database
+on:
+  workflow_call:
+    inputs:
+      files-added:
+        type: string
+      files-modified:
+        type: string
+      files-removed:
+        type: string
+      repo-ref:
+        description: 'Branch, tag or commit'
+        type: string
+        default: 'master'
+  workflow_dispatch:
+    inputs:
+      files-added:
+        type: string
+      files-modified:
+        type: string
+      files-removed:
+        type: string
+      repo-ref:
+        description: 'Branch, tag or commit'
+        type: string
+        default: 'master'
+jobs:
+  changes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bring in repo
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.repo-ref }}
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: install Python dependencies
+        run: |
+          python -m pip install -U pip
+          pip install -r scripts/requirements.txt
+      - name: embed context into JSON/JSON-LD documents
+        run: |
+          a="${{ inputs.files-added }}"
+          m="${{ inputs.files-modified }}"
+          jsona=$(python -m ogc.na.ingest_json --batch --fs ',' -t -j --skip-on-missing-context "$a" --file-filter '\.json$')
+          jsonm=$(python -m ogc.na.ingest_json --batch --fs ',' -t -j --skip-on-missing-context "$m" --file-filter '\.json$')
+          echo "Added JSON-LD files: $jsona"
+          echo "Modified JSON-LD files: $jsonm"
+          echo "jsona=$jsona" >> $GITHUB_ENV
+          echo "jsonm=$jsonm" >> $GITHUB_ENV
+      - name: detect file changes
+        env:
+            DB_USERNAME: ${{secrets.DB_USERNAME}}
+            DB_PASSWORD: ${{secrets.DB_PASSWORD}}
+            RDF4JSERVER: ${{vars.RDF_SERVICE_URL}}
+        run: |
+          echo 'Run update script...'
+          a="${{inputs.files-added}},$jsona"
+          m="${{inputs.files-modified}},$jsonm"
+          r="${{inputs.files-removed}}"
+          if [ -z $a ]; then a="x"; fi
+          if [ -z $m ]; then m="x"; fi
+          if [ -z $r ]; then r="x"; fi
+          python scripts/update_vocabs.py -u -a "$a" -m "$m" -r "$r"
+      - name: commit serialised versions of concept schemes
+        uses: EndBug/add-and-commit@v7 # You can change this to use a specific version
+        with:
+          add: .
+          message: "Generated entailment and validation results and serialisations"
+          default_author: github_actions
